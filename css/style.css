@@ -23,6 +23,7 @@ body {
 :root {
   --header-height: 60px;
   --footer-height: 65px;
+  --main-margin: 20px;
 }
 
 /* GENERICS */
@@ -49,9 +50,13 @@ header {
 }
 
 /* GRID & CAMS */
-
+main {
+  margin-bottom: var(--main-margin);
+}
 .grid {
-  height: calc(100vh - var(--header-height) - var(--footer-height));
+  height: calc(
+    100vh - var(--header-height) - var(--footer-height) - var(--main-margin)
+  );
   margin: 0 60px;
   display: flex;
   flex-wrap: wrap;
@@ -59,16 +64,38 @@ header {
   overflow: auto;
 }
 .cam {
-  background-color: blue;
-  height: 100px;
+  height: 110px;
   min-width: 80px;
   flex-basis: calc(100% / 7 - 6px);
   margin: 6px 2px;
+  position: relative;
+}
+
+img {
+  height: 110px;
+}
+
+.utente {
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  padding: 5px 5px;
+  background-color: grey;
+}
+.name-layer {
+  height: 100%;
+  backdrop-filter: blur(5px);
+}
+.name {
+  font-size: 10px;
 }
 
 /* FOOTER */
 
 footer {
   height: var(--footer-height);
-  background-color: aqua;
+  background-color: #222222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
