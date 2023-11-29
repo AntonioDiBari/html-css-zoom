@@ -22,6 +22,7 @@ body {
 
 :root {
   --header-height: 60px;
+  --footer-height: 65px;
 }
 
 /* GENERICS */
@@ -45,4 +46,29 @@ header {
   padding: 5px 5px;
   font-size: 10px;
   border-radius: 3px;
+}
+
+/* GRID & CAMS */
+
+.grid {
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+  margin: 0 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: auto;
+}
+.cam {
+  background-color: blue;
+  height: 100px;
+  min-width: 80px;
+  flex-basis: calc(100% / 7 - 6px);
+  margin: 6px 2px;
+}
+
+/* FOOTER */
+
+footer {
+  height: var(--footer-height);
+  background-color: aqua;
 }
