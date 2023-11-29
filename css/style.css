@@ -53,6 +53,7 @@ header {
 /* GRID & CAMS */
 main {
   margin-bottom: var(--main-margin);
+  overflow: auto;
 }
 .grid {
   height: calc(
@@ -63,10 +64,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow: auto;
 }
 .cam {
-  height: 110px;
+  height: 106px;
   min-width: 80px;
   flex-basis: calc(100% / 7 - 6px);
   margin: 6px 2px;
@@ -82,13 +82,7 @@ img {
   left: 0;
   bottom: 2px;
   padding: 5px 5px;
-  background-color: grey;
-}
-.name-layer {
-  height: 100%;
-  backdrop-filter: blur(5px);
-}
-.name {
+  background-color: rgba(103, 115, 125, 0.5);
   font-size: 10px;
 }
 
@@ -133,6 +127,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 0 10px;
+  font-size: 10px;
 }
 
 .end-call {
