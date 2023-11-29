@@ -1,0 +1,23 @@
+/* ## RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* GENERICS */
+.container {
+  margin: 0 auto;
+  width: 75%;
+}
