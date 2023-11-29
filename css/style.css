@@ -22,8 +22,9 @@ body {
 
 :root {
   --header-height: 60px;
-  --footer-height: 65px;
+  --footer-height: 60px;
   --main-margin: 20px;
+  --footer-margin: 6px;
 }
 
 /* GENERICS */
@@ -55,7 +56,8 @@ main {
 }
 .grid {
   height: calc(
-    100vh - var(--header-height) - var(--footer-height) - var(--main-margin)
+    100vh - var(--footer-margin) - var(--header-height) - var(--footer-height) -
+      var(--main-margin)
   );
   margin: 0 60px;
   display: flex;
@@ -98,4 +100,47 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: var(--footer-margin);
+}
+
+.settings,
+.utility {
+  height: 100%;
+  display: flex;
+}
+
+.comand {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2px 7px;
+  gap: 4px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.font-small {
+  font-size: 10px;
+}
+
+.freccia {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.end-call {
+  height: 100%;
+  width: 90px;
+  background-color: #4a4a4a;
+  color: red;
+  font-size: 10px;
+  line-height: var(--footer-height);
+  text-align: center;
 }
